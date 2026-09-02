@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Velior Watch — Montres d’atelier assemblées à Genève</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ANNOUNCEMENT / BANNERS -->
+<div class="announce" aria-label="Annonces">
+  <div class="announce__inner">
+    <div class="announce__msg on"><span class="stars">★</span> <b>-15%</b> sur toutes les montres · pendant 3 semaines</div>
+    <div class="announce__msg"><span class="stars">★★★★★</span> Noté <b>4,9/5</b> par nos clients dans le monde</div>
+    <div class="announce__msg"><b>Livraison gratuite</b> dans toute l'Europe</div>
+    <div class="announce__msg">Assemblée à la main dans nos <b>ateliers à Genève</b></div>
+    <div class="announce__msg"><b>Satisfait ou remboursé</b> · 30 jours</div>
+    <div class="announce__msg">Paiement en € ou en <b>CHF</b> (francs suisses)</div>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <a class="nav__logo" href="#top" aria-label="Velior Watch, accueil"><img src="images/logo.png" alt="Velior Watch"></a>
+  <div class="nav__links">
+    <a href="#collection">Modèles</a>
+    <a href="#bestsellers">Bestsellers</a>
+    <a href="#accessoires">Accessoires</a>
+    <a href="#avis">Avis</a>
+    <a href="#guar">Garanties</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <button class="cart-btn" id="cartBtn" aria-label="Ouvrir le panier">Panier <span class="count" id="count">0</span></button>
+</nav>
+
+<!-- MOVEMENT BANNER -->
+<section class="mvtband" id="top" aria-label="Mouvement mécanique">
+  <div id="mvt" class="mvtband__mvt"></div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track">
+    <span>Livraison sous 15 jours ouvrés</span><span>Acier 904L — boîtiers &amp; bracelets</span><span>Verre saphir</span><span>Assemblé dans nos ateliers à Genève</span>
+    <span>Livraison sous 15 jours ouvrés</span><span>Acier 904L — boîtiers &amp; bracelets</span><span>Verre saphir</span><span>Assemblé dans nos ateliers à Genève</span>
+  </div>
+</div>
+
+<!-- COLLECTION -->
+<section class="collection" id="collection">
+  <div class="wrap sec-head">
+    <span class="eyebrow reveal">La collection</span>
+    <h2 class="reveal">Nos modèles.</h2>
+    <p class="reveal">Cliquez sur un modèle pour découvrir toutes ses versions et les ajouter au panier.</p>
+  </div>
+  <div class="carousel reveal">
+    <button class="carousel__arrow prev" id="prev" aria-label="Modèle précédent">‹</button>
+    <div class="carousel__stage" id="stage"></div>
+    <button class="carousel__arrow next" id="next" aria-label="Modèle suivant">›</button>
+  </div>
+  <div class="carousel__meta wrap" id="carMeta"></div>
+</section>
+
+<!-- PACK DUO -->
+<section class="duo wrap" id="pack-duo">
+  <div class="sec-head">
+    <span class="eyebrow reveal">Composez votre duo</span>
+    <h2 class="reveal">Pack Duo — Homme &amp; Femme</h2>
+    <p class="reveal">Une montre de chaque collection, réunies dans un coffret : une Datejust pour lui, un Modèle Femme pour elle.</p>
+  </div>
+  <div class="duo__wrap reveal">
+    <article class="duo__card" id="duoCard"></article>
+  </div>
+</section>
+
+<!-- BESTSELLERS -->
+<section class="best wrap" id="bestsellers">
+  <div class="sec-head">
+    <span class="eyebrow reveal">Les préférées</span>
+    <h2 class="reveal">Nos best-sellers.</h2>
+    <p class="reveal">Les modèles qu'on vous expédie le plus souvent.</p>
+  </div>
+  <div class="best__grid reveal" id="bestGrid"></div>
+</section>
+
+<!-- ACCESSOIRES -->
+<section class="acc wrap" id="accessoires">
+  <div class="sec-head">
+    <span class="eyebrow reveal">Accessoires</span>
+    <h2 class="reveal">Boîtes.</h2>
+    <p class="reveal">De quoi compléter vos montres.</p>
+  </div>
+  <div class="acc__grid reveal" id="accGrid"></div>
+</section>
+
+<!-- AVIS -->
+<section class="reviews" id="avis">
+  <div class="wrap sec-head">
+    <span class="eyebrow reveal">Avis clients</span>
+    <h2 class="reveal">Ils portent déjà Velior.</h2>
+    <p class="reveal">Notés 4,9/5 en moyenne — avis d'acheteurs vérifiés.</p>
+  </div>
+  <div class="reviews__viewport reveal">
+    <div class="reviews__track" id="reviewTrack"></div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq wrap" id="faq">
+  <div class="sec-head">
+    <span class="eyebrow reveal">Tes questions, notre sincérité</span>
+    <h2 class="reveal">On vous explique tout.</h2>
+    <p class="reveal">Sans langue de bois. Touchez une question pour lire notre réponse.</p>
+  </div>
+  <div class="guar__list reveal" id="faqList"></div>
+</section>
+
+<!-- GUARANTEES -->
+<section class="guar wrap" id="guar">
+  <div class="sec-head">
+    <span class="eyebrow reveal">Nos engagements</span>
+    <h2 class="reveal">Des garanties,<br>en toutes lettres.</h2>
+    <p class="reveal">Touchez une garantie pour en lire le détail.</p>
+  </div>
+  <div class="guar__list reveal" id="guarList"></div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap contact__box reveal">
+    <span class="eyebrow">Une question ?</span>
+    <h2>Écrivez-nous,<br><em>on vous répond.</em></h2>
+    <p>Une hésitation sur un modèle, une taille de poignet, un délai de livraison ? Laissez votre e-mail et votre message : on revient vers vous personnellement.</p>
+    <form class="cform" id="cform" onsubmit="return sendContact(event)">
+      <label for="cmail">Votre e-mail</label>
+      <input id="cmail" type="email" placeholder="votre@email.com" required>
+      <label for="cmsg">Votre question</label>
+      <textarea id="cmsg" placeholder="Bonjour, j'aimerais savoir…" required></textarea>
+      <button type="submit" class="btn">Envoyer ma question</button>
+      <p class="cform__note">Réponse sous 24 h ouvrées.</p>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__top">
+      <div class="footer__logo">
+        <img src="images/logo.png" alt="Velior Watch">
+        <p>Montres d'atelier, assemblées et contrôlées à la main à Genève. Un modèle, un tirage, un numéro.</p>
+      </div>
+      <div><h5>Boutique</h5><ul>
+        <li><a href="#collection">Tous les modèles</a></li>
+        <li><a href="#bestsellers">Best-sellers</a></li>
+        <li><a href="#accessoires">Accessoires</a></li>
+        <li><a href="#avis">Avis clients</a></li>
+      </ul></div>
+      <div><h5>Maison</h5><ul>
+        <li><a href="#faq">On vous explique tout</a></li>
+        <li><a href="#guar">Garanties</a></li>
+        <li><a href="#contact">Livraison & retours</a></li>
+        <li><a href="#contact">Nous écrire</a></li>
+      </ul></div>
+      <div><h5>Suivez-nous</h5>
+        <div class="social">
+          <a class="social__btn" href="https://instagram.com/velior.watch" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none"/></svg>Instagram</a>
+          <a class="social__btn" href="https://www.tiktok.com/@velior.watch" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 4v9.7a3.4 3.4 0 1 1-3-3.38"/><path d="M14 4.2c.5 2.4 2 3.9 4.5 4.2"/></svg>TikTok</a>
+        </div>
+      </div>
+    </div>
+    <div class="orn" style="margin-bottom:24px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M12 2l3 7 7 3-7 3-3 7-3-7-7-3 7-3z"/></svg></div>
+    <div class="footer__bottom">
+      <span>© 2026 Velior Watch. Tous droits réservés.</span>
+      <span>Conçu pour le poignet, pas pour la vitrine.</span>
+    </div>
+    <p class="footer__disclaimer">Velior Watch est une maison indépendante, non affiliée aux marques évoquées. Les noms de modèles décrivent des styles hommage assemblés sur mouvement automatique et ne désignent aucun produit d'origine.</p>
+  </div>
+</footer>
+
+<!-- MODEL PAGE (catalogue d'un modèle) -->
+<div class="modelpage" id="modelPage" aria-hidden="true">
+  <div class="modelpage__bar">
+    <button class="modelpage__back" id="mpBack">‹ Retour aux modèles</button>
+    <span class="modelpage__logo"><img src="images/logo.png" alt="Velior Watch"></span>
+    <button class="cart-btn" id="mpCart" aria-label="Ouvrir le panier">Panier <span class="count">0</span></button>
+  </div>
+  <div class="modelpage__head">
+    <span class="eyebrow">Collection</span>
+    <h2 id="mpName"></h2>
+    <p id="mpDesc"></p>
+  </div>
+  <div class="modelpage__grid" id="mpGrid"></div>
+</div>
+
+<!-- FICHE PRODUIT (PDP) -->
+<div class="pdp" id="productPage" aria-hidden="true">
+  <div class="pdp__bar">
+    <button class="pdp__back" id="pdpBack">‹ Retour</button>
+    <span class="pdp__logo"><img src="images/logo.png" alt="Velior Watch"></span>
+    <button class="cart-btn" id="pdpCart" aria-label="Ouvrir le panier">Panier <span class="count">0</span></button>
+  </div>
+  <div class="pdp__wrap">
+    <div class="pdp__gallery">
+      <div class="pdp__main" id="pdpMain"></div>
+      <div class="pdp__thumbs" id="pdpThumbs"></div>
+    </div>
+    <div class="pdp__info" id="pdpInfo"></div>
+  </div>
+</div>
+
+<!-- CART DRAWER -->
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer" aria-label="Panier" aria-hidden="true">
+  <div class="drawer__head"><h3>Votre panier</h3><button class="drawer__close" id="drawerClose" aria-label="Fermer">×</button></div>
+  <div class="drawer__body" id="drawerBody"></div>
+  <div class="drawer__foot" id="drawerFoot" style="display:none">
+    <div class="drawer__row"><span>Sous-total</span><span id="subtotal">0 €</span></div>
+    <div class="drawer__row"><span>Livraison</span><span class="ship-free">Gratuite</span></div>
+    <div class="drawer__row total"><span>Total</span><b id="total">0 €</b></div>
+    <p class="drawer__cur">Réglez en euros (€) ou en francs suisses (CHF).</p>
+    <button class="checkout" id="checkout">Passer commande</button>
+    <div class="pay-msg" id="payMsg"><b>Presque prêt.</b> Le paiement en ligne n'est pas encore branché sur cette maquette. Pour encaisser réellement, il reste à connecter un service comme <b>Stripe</b> ou <b>PayPal</b> (qui gèrent le € et le CHF). En attendant, écrivez-nous et nous finalisons la commande à la main.</div>
+    <p class="drawer__note">🚚 Livraison <b>gratuite</b> dans toute l'Europe · Garantie 2 ans</p>
+  </div>
+</aside>
+
+<!-- TOAST -->
+<div class="toast" id="toast"><span class="dot"></span><span id="toastMsg"></span></div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

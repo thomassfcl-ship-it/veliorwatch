@@ -1,0 +1,10 @@
+SITE VELIOR WATCH — code source complet
+
+Fichiers :
+- index.html  : la structure de la page
+- style.css   : tout le design (couleurs, arches, mise en page)
+- script.js   : toute la logique (carrousel, panier, Pack Duo, promo...)
+- images/     : toutes les photos, le logo, la video du mouvement
+
+POUR OUVRIR : gardez les 3 fichiers + le dossier images/ ensemble, puis double-cliquez index.html.
+POUR HEBERGER : envoyez TOUT le dossier sur votre hebergeur (ou Netlify/Vercel).
